@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>윤지원 | 웹퍼블리셔 포트폴리오 | Design</title>
+   <link rel="icon" href="./favicon/favicon.ico" >
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/css-reset@0.0.1/reset.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css">
+   <link rel="stylesheet" href="./RockScissorsPaper.css">
+
+   <!-- JS -->
+   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+   <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+   <script defer src="./RockScissorsPaper.js"></script>
+
+
+</head>
+<body>
+      <section id="start">
+            <h1>가위 • 바위 • 보 게임</h1>
+            <button class="play">시작하기</button>
+
+      </section>
+
+      <section id="rock_wrap">
+         <div class="inner">
+            <div class="play_show">
+
+               <div class="computer_box">
+                  <h3>컴퓨터</h3>
+                  <img class="computer_result" src="#"></img>
+               </div>
+
+               <div class="user_buttons">
+
+                     <h3>사용자</h3>
+
+
+                  <div class="buttons">
+                     <button class="rock" value="rock">
+                        <img src="./img/rock.png" alt="바위">
+                        <p>바위</p>
+                     </button>
+
+                     <button class="scissor" value="scissors">
+                        <img src="./img/scissors.png" alt="가위">
+                        <p>가위</p>
+                     </button>
+
+                     <button class="paper" value="paper">
+                        <img src="./img/paper.png" alt="보">
+                        <p>보</p>
+                     </button>
+                  </div>
+               </div>
+            </div>
+
+            <!-- <div class="pageMove">
+               <button class="prev">이전</button>
+                <button class="next">다음</button>
+            </div> -->
+
+         </div>
+      </section>
+
+      <section id="result">
+         <div class="inner">
+            <div class="resultShow">
+               <div class="result_text">
+                  <h3>결과</h3>
+                  <strong></strong>
+               </div>
+
+               <div class="verseBox">
+                  <div class="resultBox computer_box">
+                     <h3>컴퓨터</h3>
+                     <img class="computer_resultImg" src="#"></img>
+                  </div>
+
+                  <p>VS</p>
+
+                  <div class="resultBox user_box">
+                     <h3>사용자</h3>
+                     <img class="user_resultImg" src="#"></img>
+                  </div>
+               </div>
+            </div>
+
+
+            <div class="pageMove">
+               <button class="return">다시하기</button>
+            </div>
+
+         </div>
+      </section>
+
+</body>
+</html>

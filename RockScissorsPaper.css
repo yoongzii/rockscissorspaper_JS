@@ -1,0 +1,171 @@
+@font-face{
+    font-family: 'Recipe';
+    src: url(./font/Recipekorea\ 레코체\ FONT.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+:root{
+    --main-color: #cc5803;
+    --font:'Recipe','pretendard', serif;
+}
+
+html{font-size: 62.5%;}
+*{
+    box-sizing: border-box;
+    font-family: 'Recipe','pretendard', serif;
+    line-height : normal
+}
+section{height: 100vh; background: #FEF4E4;}
+button{background: none; border: none;}
+h3{
+    font-family: var(--font);
+    font-weight: 500; font-size: 2.4rem;
+    color: var(--main-color);
+    line-height : normal
+}
+.inner{padding: 5% 3%; height: 100%;}
+
+/* 이전/다음 공통 버튼 */
+/* .pageMove {
+    width: 100%;
+    display: flex; align-items: center;
+    justify-content: space-between;
+
+}
+.pageMove button{
+    font-size: 2.5rem;
+    color: var(--main-color);
+    text-align: center;
+    border-bottom: 3px solid var(--main-color);
+} */
+
+#start{
+    display: flex;
+    flex-direction: column;
+    align-items: center; justify-content: space-between;
+    background: url(./img/total_img.png) center no-repeat;
+    padding: 5% 3% 2%;
+}
+
+#start h1{
+    font-size: 5rem; font-weight: bold;
+    color: var(--main-color);
+    font-family: var(--font);
+}
+#start button{
+    font-size: 3.2rem;
+    padding: 1.8rem 2rem 1rem;
+    color: var(--main-color);
+    background: none;
+    border: 1px solid var(--main-color);
+    border-radius: 45%;
+    font-family: var(--font);
+    text-align: center;
+}
+
+#rock_wrap .inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center; justify-content: space-between;
+}
+
+
+#rock_wrap .play_show{
+    display: flex; flex-direction: column; gap: 5rem;
+    align-items: center; justify-content: space-between;
+    height: 100%;
+    padding: 3% 0;
+    font-size: 2.5rem;
+}
+#rock_wrap .play_show .computer_box{
+    display: flex; flex-direction: column; align-items: center;
+    justify-content: center; gap: 3rem;
+    box-sizing: border-box;
+}
+
+#rock_wrap .play_show .computer_box img{
+     width: 30rem; height: 30rem;
+    }
+#rock_wrap .user_buttons{
+    display: flex; flex-direction: column;
+    align-items: center; gap: 3rem;
+}
+#rock_wrap .buttons{
+    display: flex; gap: 2rem;
+    align-items: center; justify-content: center;
+}
+
+#rock_wrap .buttons button{
+    display: flex; flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+#rock_wrap .buttons button img{
+    width: 20rem; height: 20rem;
+
+    overflow: hidden;
+}
+
+#result .inner{
+    height: 100%;
+    display: flex; flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+#result .resultShow{
+    display: flex;flex-direction: column;
+    align-items: center;
+    gap: 10rem;
+    justify-content: center;
+    height: 100%;
+}
+
+#result .resultShow .result_text strong{
+    display: block;
+    font-size: 5rem;
+    font-family: var(--font);
+    font-weight: 500;
+    color: var(--main-color);
+    line-height : normal;
+    margin-top: 4rem;
+
+}
+
+#result .verseBox{
+    display: flex; align-items: center; gap: 6rem;
+    justify-content: space-between;
+}
+
+#result .verseBox .resultBox{
+    display: flex; flex-direction: column; gap: 2rem;
+    align-items: center;
+
+
+}
+
+#result .verseBox p{
+    font-size: 3rem;
+    color: var(--main-color); font-weight: bold;
+    font-family: var(--font);
+}
+#result .verseBox .resultBox img{
+    width: 30rem; height: 30rem;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+#result .pageMove {
+    display: flex; align-items: center;
+    justify-content: center;
+    border: 1px solid var(--main-color);
+    padding: 1.8rem 2rem 1rem;
+    border-radius: 45%;
+}
+#result .pageMove button{
+    font-size: 2.5rem;
+    color: var(--main-color);
+}
+
+
+#rock_wrap, #result {display: none;}
