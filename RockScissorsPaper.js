@@ -1,5 +1,7 @@
 
-
+const startExplan = document.querySelector('.start_btns .explan')
+const startModal = document.querySelector('#start .modal')
+const modalClose = document.querySelector('#start .modal .close')
 const startPage = document.querySelector('#start')
 const startPlay = document.querySelector('#start .play')
 const rockWrapPage = document.querySelector('#rock_wrap')
@@ -11,7 +13,12 @@ const userResult = document.querySelector('.resultBox .user_resultImg')
 const computerResult = document.querySelector('.resultBox .computer_resultImg')
 const buttons = document.querySelectorAll('.buttons button')
 
-
+startExplan.addEventListener('click', function(){
+    startModal.style.display="flex"
+})
+modalClose.addEventListener('click',function(){
+    startModal.style.display="none"
+})
 
 //start 첫화면에서 클릭하면 화면이 바뀌면서 게임이 시작됨
 startPlay.addEventListener('click',function(){

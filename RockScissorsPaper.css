@@ -53,15 +53,40 @@ h3{
     align-items: center; justify-content: space-between;
     background: url(./img/total_img.png) center no-repeat;
     padding: 5% 3% 2%;
+    position: relative;
+
 }
 
-/* #start h1{
-    font-size: 5rem; font-weight: bold;
-    color: var(--main-color);
-    font-family: var(--font);
-} */
-#start button{
+#start .start_btns {
+    display: flex; gap: 5rem;
+    align-items: center; justify-content: center;
+}
+
+#start .start_btns button{
     font-size: 3.2rem;
+    padding: 1.8rem 2rem 1rem;
+    color: var(--main-color);
+    background: none;
+    border: 1px solid var(--main-color);
+    border-radius: 45%;
+    font-family: var(--font);
+    text-align: center;
+}
+#start .modal {
+    display: none; align-items:center;
+    flex-direction: column; gap: 5rem;
+    justify-content: center;
+    position: absolute; left: 50%; right: 0; top: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid tan; border-radius: 10%;
+    width: 50%;height: 60%;
+    background: #FEF4E4;
+}
+#start .modal h3{font-size: 4rem;}
+#start .modal p{font-size: 2.4rem; font-weight: 500;}
+#start .modal li{font-size: 2rem; line-height: 2.4rem;}
+#start .modal .close{
+    font-size: 2.8rem;
     padding: 1.8rem 2rem 1rem;
     color: var(--main-color);
     background: none;
