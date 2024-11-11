@@ -14,16 +14,16 @@ const computerResult = document.querySelector('.resultBox .computer_resultImg')
 const buttons = document.querySelectorAll('.buttons button')
 
 startExplan.addEventListener('click', function(){
-    startModal.style.display="flex"
+   startModal.style.display="flex"
 })
 modalClose.addEventListener('click',function(){
-    startModal.style.display="none"
+   startModal.style.display="none"
 })
 
 //start 첫화면에서 클릭하면 화면이 바뀌면서 게임이 시작됨
 startPlay.addEventListener('click',function(){
-    startPage.style.display = 'none'
-    rockWrapPage.style.display = 'block'
+   startPage.style.display = 'none'
+   rockWrapPage.style.display = 'block'
 })
 
 //  rock,scissors,paper
@@ -34,71 +34,74 @@ const computerImg = ['./img/rock.png', './img/scissors.png', './img/paper.png']
 
 let loopSetInterval;
 function randomStart(){
-    loopSetInterval = setInterval (function(){
-        const imgMixIndex = computerImg[Math.floor(Math.random() * 3)]
-        randomImg.src = imgMixIndex
-    },40);
+   loopSetInterval = setInterval (function(){
+      const imgMixIndex = computerImg[Math.floor(Math.random() * 3)]
+      randomImg.src = imgMixIndex
+   },40);
 }
 randomStart()
 
 let imgMixIndex = ''
 let computerChoice = ''
 
+
+
 const gameResult = function (userChoice, computerChoice, buttonImg) {
-    if(userChoice === computerChoice){
-        resultTextItem.innerText = '무승부입니다.'
-    } else{
-        switch(userChoice + computerChoice){
-            case 'rockscissor':
-            case 'scissorpaper':
-            case 'paperrock':
-                resultTextItem.innerText = '축하해요~ 이겼어요!!!'
+   if(userChoice === computerChoice){
+      resultTextItem.innerText = '무승부입니다.'
+   } else{
+      switch(userChoice + computerChoice){
+         case 'rockscissors':
+         case 'scissorspaper':
+         case 'paperrock':
+         resultTextItem.innerText = '축하해요~ 이겼어요!!!'
 
-            break;
-            case 'scissorrock':
-            case 'paperscissor':
-            case 'rockpaper':
-                resultTextItem.innerText = '안타깝네요ㅠㅠ 다시 도전하시겠어요?'
-            break;
-        }
+         break;
+         case 'scissorrock':
+         case 'paperscissors':
+         case 'rockpaper':
+         resultTextItem.innerText = '안타깝네요ㅠㅠ 다시 도전하시겠어요?'
+         break;
+      }
+   }
 
-    }
-    computerResult.src = `./img/${computerChoice}.png`;
-    userResult.src = buttonImg;
+   computerResult.src = `./img/${computerChoice}.png`;
+   userResult.src = buttonImg;
 }
 
 
 buttons.forEach(button => {
-    button.addEventListener('click',function() {
-        const userChoice = button.value
-        const buttonImg = button.querySelector('img').src
+   button.addEventListener('click',function() {
+      const userChoice = button.value
+      const buttonImg = button.querySelector('img').src
 
-        //사용자가 버튼을 클릭했을때, 컴퓨터가 랜덤으로 나오도록 지정
-        //3을 곱한거는 최대값을 만들기 위해서 floor()는 소수점 버리고, 정수로 만들기
-        const computerIndex = Math.floor(Math.random() * 3)
-        const computerChoice = result[computerIndex]
-        gameResult(userChoice, computerChoice, buttonImg)
+      //사용자가 버튼을 클릭했을때, 컴퓨터가 랜덤으로 나오도록 지정
+      //3을 곱한거는 최대값을 만들기 위해서 floor()는 소수점 버리고, 정수로 만들기
 
-        // console.log(`컴퓨터${computerChoice} ,사용자:${userChoice}`)
+      const computerIndex = Math.floor(Math.random() * 3)
+      const computerChoice = result[computerIndex]
+      gameResult(userChoice, computerChoice, buttonImg)
 
-        rockWrapPage.style.display = 'none'
-        resultPage.style.display = 'block'
+      // console.log(`컴퓨터${computerChoice} ,사용자:${userChoice}`)
 
-        clearInterval(loopSetInterval)
-    })
+      rockWrapPage.style.display = 'none'
+      resultPage.style.display = 'block'
+
+      clearInterval(loopSetInterval)
+   }
+)
 
 })
 
 
 resultReturn.addEventListener('click', function(){
-    resultPage.style.display = 'none'
-    startPage.style.display = 'block'
+   resultPage.style.display = 'none'
+   startPage.style.display = 'block'
 
-    resultTextItem.innerText = '';
-    userResult.src = ''; // 사용자의 이미지 초기화
-    computerResult.src = ''; // 컴퓨터의 이미지 초기화
+   resultTextItem.innerText = '';
+   userResult.src = ''; // 사용자의 이미지 초기화
+   computerResult.src = ''; // 컴퓨터의 이미지 초기화
 
-
-    randomStart()
+   randomStart()
 })
 
